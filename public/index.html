@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bing Play - Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <div class="logo-container">
+        <div class="logo">
+            <div class="logo-icon"></div>
+        </div>
+        <div class="brand-name">Bing Play</div>
+    </div>
+
+   <body>
+    <div class="music-player">
+        <!-- Hidden audio element for actual playback -->
+        <audio id="audioPlayer" preload="metadata"></audio>
+        
+        <div class="album-art no-image" id="albumArt"></div>
+        
+        <div class="song-info">
+            <div class="song-title" id="songTitle">Jaane Na Dunga Kahin</div>
+            <div class="artist-name" id="artistName">Armaan Malik</div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="time-display">
+                <span id="currentTime">0:00</span>
+                <span id="totalTime">3:45</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn" id="prevBtn">⏮</button>
+            <button class="control-btn play-pause" id="playPauseBtn">▶</button>
+            <button class="control-btn" id="nextBtn">⏭</button>
+        </div>
+
+        <div class="volume-container">
+            <div class="volume-icon" id="volumeIcon">🔊</div>
+            <div class="volume-bar" id="volumeBar">
+                <div class="volume-progress" id="volumeProgress"></div>
+            </div>
+        </div>
+
+        <div class="playlist" id="playlist">
+            <div class="playlist-item active" data-song="0">
+                <div class="playlist-item-info">
+                    <div class="playlist-item-title">Jaane Na Dunga Kahin</div>
+                    <div class="playlist-item-artist">Armaan Malik</div>
+                </div>
+                <div class="playlist-item-duration">3:45</div>
+            </div>
+            <div class="playlist-item" data-song="1">
+                <div class="playlist-item-info">
+                    <div class="playlist-item-title">Qayde se</div>
+                    <div class="playlist-item-artist">Arijit Singh</div>
+                </div>
+                <div class="playlist-item-duration">4:12</div>
+            </div>
+            <div class="playlist-item" data-song="2">
+                <div class="playlist-item-info">
+                    <div class="playlist-item-title">Tum Jo Aaye</div>
+                    <div class="playlist-item-artist">Rahat Fateh Ali Khan , Tulsi Kumar</div>
+                </div>
+                <div class="playlist-item-duration">5:20</div>
+            </div>
+            <div class="playlist-item" data-song="3">
+                <div class="playlist-item-info">
+                    <div class="playlist-item-title">In Dino</div>
+                    <div class="playlist-item-artist">Soham , Pritam</div>
+                </div>
+                <div class="playlist-item-duration">3:58</div>
+            </div>
+            <div class="playlist-item" data-song="4">
+                <div class="playlist-item-info">
+                    <div class="playlist-item-title">Humsafar</div>
+                    <div class="playlist-item-artist">Sachet Tandon, Parampara Tandon</div>
+                </div>
+                <div class="playlist-item-duration">4:33</div>
+            </div>
+            <div class="playlist-item" data-song="5">
+                <div class="playlist-item-info">
+                    <div class="playlist-item-title">Tumhare He Rahenge Hum</div>
+                    <div class="playlist-item-artist">Sachin-Jigar ,Shilpa Rao</div>
+                </div>
+                <div class="playlist-item-duration">4:22</div>
+                </div>
+            <div class="playlist-item" data-song="6">
+                <div class="playlist-item-info">
+                    <div class="playlist-item-title">Dil Kyun Yeh Mera</div>
+                    <div class="playlist-item-artist">KK</div>
+                    </div>
+                <div class="playlist-item-duration">4:05</div>
+                </div>
+            <div class="playlist-item" data-song="7">
+                <div class="playlist-item-info">
+                    <div class="playlist-item-title">Chahu Main Ya Na</div>
+                    <div class="playlist-item-artist">Arijit Singh Palak Muchhal</div>
+                </div>
+                <div class="playlist-item-duration">4:10</div>
+                </div>
+            <div class="playlist-item" data-song="8">
+                <div class="playlist-item-info">
+                    <div class="playlist-item-title">Hey Shona</div>
+                    <div class="playlist-item-artist">Shaan Sunidhi Chauhan</div>
+                </div>
+                <div class="playlist-item-duration">4:00</div>
+                </div>
+            <div class="playlist-item" data-song="9">
+                <div class="playlist-item-info">
+                    <div class="playlist-item-title">Dil Leke Darde Dil</div>
+                    <div class="playlist-item-artist">Shaan</div>
+                </div>
+                <div class="playlist-item-duration">4:15</div>
+                </div>
+            <div class="playlist-item" data-song="11">
+                <div class="playlist-item-info">
+                    <div class="playlist-item-title">Dil Vich Lagy</div>
+                    <div class="playlist-item-artist">Babul Supriyo, Alka Yagnik</div>
+                </div>
+                <div class="playlist-item-duration">4:05</div>
+                </div>  
+                
+            <div class="playlist-item" data-song="10">
+                <div class="playlist-item-info">        
+                    <div class="playlist-item-title">Hum Tum</div>
+                    <div class="playlist-item-artist">Babul supriyo, Alka Yagnik</div>
+                    </div>
+                <div class="playlist-item-duration">3:50</div>
+                </div>
+            <div class="playlist-item" data-song="12">
+                <div class="playlist-item-info">    
+                    <div class="playlist-item-title">Dekho Na</div>
+                    <div class="playlist-item-artist">Sonu Nigam, Sunidhi Chauhan</div> 
+                    </div>
+                <div class="playlist-item-duration">4:20</div>  
+                </div>
+        
+            
+            <div class="playlist-item" data-song="14">
+                <div class="playlist-item-info">
+                    <div class="playlist-item-title">Mohabbat Ho Na Jaye</div>
+                    <div class="playlist-item-artist">Kumar Sanu, Alka Yagnik</div>
+                </div>
+                <div class="playlist-item-duration">4:25</div>
+                </div>
+                
+            <div class="playlist-item" data-song="15">
+                <div class="playlist-item-info">
+                    <div class="playlist-item-title">Kaho Na Pyaar Hai</div>
+                    <div class="playlist-item-artist">Udit Narayan, Alka Yagnik</div>   
+                    </div>
+                <div class="playlist-item-duration">4:15</div>
+                </div>
+            
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
